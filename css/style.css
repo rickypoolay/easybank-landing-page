@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Public Sans';
+}
+
+@media (min-width: 64em) {
+  * {
+    text-align: left;
+  }
+  * .mockup-bg-mobile {
+    display: none;
+  }
+  * .mockup-bg-desktop {
+    display: unset;
+  }
+}
+
+.mockup-bg-mobile {
+  display: unset;
+}
+
+.mockup-bg-desktop {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: .75rem;
+  color: #9698a6;
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #2d314d;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: .5em;
+}
+
+section {
+  padding: 4em 1.5em;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em;
+  width: 100%;
+  background-color: white;
+}
+
+nav .logo {
+  width: 8em;
+  cursor: pointer;
+}
+
+nav .hamburger {
+  width: 1.5em;
+  cursor: pointer;
+}
+
+header .mockup {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  background-image: url("../images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  height: 20em;
+}
+
+header h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+header p {
+  margin: 1em 0;
+}
+
+header button {
+  margin-top: 1em;
+}
+
+@media (min-width: 64em) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  header .mockup {
+    background-image: url("../images/bg-intro-desktop.svg");
+    -o-object-fit: none;
+       object-fit: none;
+  }
+}
+
+.request-btn {
+  border: none;
+  background: -webkit-gradient(linear, right top, left top, color-stop(5%, #2bb7da), color-stop(90%, #31d35c));
+  background: linear-gradient(to left, #2bb7da 5%, #31d35c 90%);
+  padding: 0.75em 1.5em;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+#landing-section {
+  padding-top: 1.5em;
+}
+
+#why-section {
+  background-color: #f3f4f6;
+}
+
+#why-section img {
+  width: 20%;
+  margin-bottom: 1em;
+}
+
+.why-cards-container {
+  margin-top: 3em;
+}
+
+.why-cards-container h3 {
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+.why-cards-container .why-card {
+  margin-bottom: 2em;
+}
+
+.why-cards-container .why-card:last-child {
+  margin-bottom: 0;
+}
+
+#articles-section {
+  background-color: #fafafa;
+  padding-bottom: 0;
+}
+
+#articles-section h2 {
+  margin-bottom: 1em;
+}
+
+#articles-section2 {
+  padding-top: .75em;
+  background-color: #f3f4f6;
+}
+
+#articles-section2 h2 {
+  margin-bottom: 1em;
+}
+
+.articles-container2 {
+  padding-top: 1em;
+}
+
+.article-card {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+}
+
+.article-card:last-child {
+  margin-bottom: 0;
+}
+
+.article-card p,
+.article-card h4 {
+  text-align: left;
+}
+
+.article-card h4 {
+  font-weight: 400;
+  font-size: .8rem;
+  margin-bottom: 1em;
+}
+
+.article-card p {
+  font-size: .7rem;
+}
+
+.article-card .author-name {
+  font-size: .6rem;
+  margin-bottom: 1em;
+}
+
+.article-card .article-preview {
+  padding: 1.5em;
+  background-color: white;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2d314d;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 3em;
+}
+
+footer .logo-social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+footer .logo-social-container .logo {
+  margin-bottom: 2em;
+}
+
+footer .logo-social-container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 65%;
+}
+
+footer .logo-social-container .socials img {
+  width: 1.25em;
+  cursor: pointer;
+}
+
+footer .footer-links1,
+footer .footer-links2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-links1 a,
+footer .footer-links2 a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-size: .8rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+footer .request-btn {
+  margin: 1em 0;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
