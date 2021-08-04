@@ -42,16 +42,9 @@
 
     @include breakpoint(laptop) {
         text-align: left;
-
+    }
 }
 
-.mockup-bg-mobile {
-    display:unset;
-}
-
-.mockup-bg-desktop {
-    display:none;
-}
 
 img {
     width:100%;
@@ -78,6 +71,14 @@ h2 {
 
 section {
     padding:4em 1.5em;
+
+    @include breakpoint (laptop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 4em 8em;
+    }
 }
 
 nav {
@@ -88,6 +89,8 @@ nav {
     padding:1.5em;
     width: 100%;
     background-color: white;
+    z-index: 2;
+    position: sticky;
 
     .logo {
         width:8em;
@@ -98,18 +101,56 @@ nav {
         width:1.5em;
         cursor: pointer;
     }
+
+    @include breakpoint (laptop) {
+
+    }
+}
+
+
+
+
+.request-btn {
+    border:none;
+    background: linear-gradient(to left , rgb(43, 183, 218) 5%, rgb(49, 211, 92) 90%);
+    padding: 0.75em 1.5em;
+    border-radius: 50px;
+    color:white;
+    cursor: pointer;
+}
+
+//Landing Section
+#landing-section {
+    padding-top: 1.5em;
+    @include breakpoint (laptop) {
+        padding:0;
+
+        .landing-info {
+        padding:10em 8em;   
+        }
+    }
 }
 
 header {
 
+    .mockup-container {
+        position:relative;
+    }
+
     .mockup {
-        object-fit:cover;
-        position: relative;
-        background-image: url("../images/bg-intro-mobile.svg");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: 100%;
-        height: 20em;
+        position:absolute;
+        z-index: 1;
+        top:-16%;
+        width: 100%;
+        padding:1em;
+    }
+
+    .mockup-bg-mobile {
+        display:unset;
+    }
+    
+    .mockup-bg-desktop {
+        display:none;
     }
 
     h1 {
@@ -131,26 +172,28 @@ header {
         align-items: center;
         flex-direction: row-reverse;
 
+        .mockup-container {
+        background-image: url("../images/bg-intro-desktop.svg");
+        height: 30em;
+        width:50em;
+        background-position:top;
+        }
+
         .mockup {
-            background-image: url("../images/bg-intro-desktop.svg");
-            object-fit: none;
+            top: -20%;
+        }
+
+        .mockup-bg-mobile {
+            display:none;
+        }
+        
+        .mockup-bg-desktop {
+            position: relative;
+            display:unset;
+            width: 100%;
+            object-position: right top;
         }
     } 
-}
-
-
-.request-btn {
-    border:none;
-    background: linear-gradient(to left , rgb(43, 183, 218) 5%, rgb(49, 211, 92) 90%);
-    padding: 0.75em 1.5em;
-    border-radius: 50px;
-    color:white;
-    cursor: pointer;
-}
-
-//Landing Section
-#landing-section {
-    padding-top: 1.5em;
 }
 
 //Why Section
@@ -165,6 +208,10 @@ header {
 }
 
 .why-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 3em;
 
     h3 {
@@ -174,10 +221,24 @@ header {
 
     .why-card {
     margin-bottom: 2em;
+    max-width: 20em;
     
         &:last-child{
         margin-bottom: 0; 
         }
+
+        
+    }
+
+    @include breakpoint (laptop) {
+     display:flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+
+     .why-card {
+         margin-bottom:0;
+     }
     }
 }
 
@@ -185,33 +246,36 @@ header {
 
 #articles-section {
     background-color: hsl(0, 0%, 98%);
-    padding-bottom: 0;
 
     h2 {
         margin-bottom: 1em;
+        width: 100%;
+    }
+    @include breakpoint (laptop) {
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+     justify-content: center;
     }
 }
 
+    // background-color: hsl(220, 16%, 96%);
 
-
-#articles-section2 {
-    padding-top: .75em;
-    background-color: hsl(220, 16%, 96%);
-
-    h2 {
-        margin-bottom: 1em;
+.articles-container {
+    @include breakpoint (laptop) {
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
     }
-}
-
-.articles-container2 {
-    padding-top: 1em;
 }
 
 .article-card {
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 1.5em;;
+    margin-bottom: 1.5em;
     cursor: pointer;
+    flex-basis: 100%;
 
     &:last-child {
         margin-bottom: 0;
@@ -241,6 +305,21 @@ header {
         padding: 1.5em;
         background-color: white;
         
+    }
+    @include breakpoint (laptop) {
+     max-width: 15em;   
+     flex-direction: column;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 0;
+     margin: 0 1em;
+
+     img {
+        object-fit:cover;
+        height:20%;
+        max-width: 15em;
+     }
     }
 }
 
