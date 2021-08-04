@@ -135,22 +135,21 @@ header {
 
     .mockup-container {
         position:relative;
+        background-image: url("../images/bg-intro-mobile.svg");
+        height: 20em;
+        width:100%;
+        background-position:top;
+        background-size:cover;
+        background-repeat:no-repeat;
     }
 
     .mockup {
         position:absolute;
         z-index: 1;
-        top:-16%;
+        top:-20%;
+        left:0;
         width: 100%;
         padding:1em;
-    }
-
-    .mockup-bg-mobile {
-        display:unset;
-    }
-    
-    .mockup-bg-desktop {
-        display:none;
     }
 
     h1 {
@@ -176,23 +175,15 @@ header {
         background-image: url("../images/bg-intro-desktop.svg");
         height: 30em;
         width:50em;
-        background-position:top;
+        background-position:left -10em;
+        background-size: 50em;
+        background-repeat:no-repeat;
         }
 
         .mockup {
             top: -20%;
         }
-
-        .mockup-bg-mobile {
-            display:none;
-        }
         
-        .mockup-bg-desktop {
-            position: relative;
-            display:unset;
-            width: 100%;
-            object-position: right top;
-        }
     } 
 }
 
@@ -203,6 +194,10 @@ header {
     img {
      width:20%;
      margin-bottom: 1em;
+    }
+
+    h2,p {
+        width: 100%;
     }
 
 }
@@ -317,7 +312,7 @@ header {
 
      img {
         object-fit:cover;
-        height:20%;
+        height:15em;
         max-width: 15em;
      }
     }

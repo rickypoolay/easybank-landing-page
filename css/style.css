@@ -118,22 +118,21 @@ nav .hamburger {
 
 header .mockup-container {
   position: relative;
+  background-image: url("../images/bg-intro-mobile.svg");
+  height: 20em;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header .mockup {
   position: absolute;
   z-index: 1;
-  top: -16%;
+  top: -20%;
+  left: 0;
   width: 100%;
   padding: 1em;
-}
-
-header .mockup-bg-mobile {
-  display: unset;
-}
-
-header .mockup-bg-desktop {
-  display: none;
 }
 
 header h1 {
@@ -169,20 +168,12 @@ header button {
     background-image: url("../images/bg-intro-desktop.svg");
     height: 30em;
     width: 50em;
-    background-position: top;
+    background-position: left -10em;
+    background-size: 50em;
+    background-repeat: no-repeat;
   }
   header .mockup {
     top: -20%;
-  }
-  header .mockup-bg-mobile {
-    display: none;
-  }
-  header .mockup-bg-desktop {
-    position: relative;
-    display: unset;
-    width: 100%;
-    -o-object-position: right top;
-       object-position: right top;
   }
 }
 
@@ -193,6 +184,10 @@ header button {
 #why-section img {
   width: 20%;
   margin-bottom: 1em;
+}
+
+#why-section h2, #why-section p {
+  width: 100%;
 }
 
 .why-cards-container {
@@ -349,7 +344,7 @@ header button {
   .article-card img {
     -o-object-fit: cover;
        object-fit: cover;
-    height: 20%;
+    height: 15em;
     max-width: 15em;
   }
 }
