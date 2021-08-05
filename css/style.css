@@ -105,16 +105,25 @@ nav .hamburger {
 
 @media (min-width: 64em) {
   .container {
-    width: 70vw;
+    width: 80vw;
   }
+}
+
+#landing-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 64em) {
   #landing-section {
     padding: 0;
-  }
-  #landing-section .landing-info {
-    padding: 10em 8em;
   }
 }
 
@@ -194,8 +203,8 @@ header button {
     padding: 0;
     width: 100%;
     top: -30%;
-    max-width: 40em;
     min-width: 30em;
+    max-width: 35em;
     -webkit-transform: translateX(-60%);
             transform: translateX(-60%);
   }

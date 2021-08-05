@@ -114,19 +114,18 @@ nav {
 
 @include breakpoint (laptop) {
     .container {
-        width: 70vw;
+        width: 80vw;
     }
 }
 
 //Landing Section
 #landing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include breakpoint (laptop) {
         padding:0;
-
-        .landing-info {
-        padding:10em 8em;   
-        }
     }
 }
 
@@ -203,8 +202,8 @@ header {
             padding:0;
             width: 100%;
             top: -30%;
-            max-width:40em;
             min-width: 30em;
+            max-width: 35em;
             transform: translateX(-60%);
         }
         
