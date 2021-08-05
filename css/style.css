@@ -103,8 +103,10 @@ nav .hamburger {
   cursor: pointer;
 }
 
-#landing-section {
-  padding-top: 1.5em;
+@media (min-width: 64em) {
+  .container {
+    width: 70vw;
+  }
 }
 
 @media (min-width: 64em) {
@@ -120,19 +122,21 @@ header .mockup-container {
   position: relative;
   background-image: url("../images/bg-intro-mobile.svg");
   height: 20em;
-  width: 100%;
   background-position: top;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 header .mockup {
   position: absolute;
   z-index: 1;
-  top: -20%;
-  left: 0;
+  top: -27%;
+  left: 50%;
   width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 1em;
+  max-width: 22.5em;
 }
 
 header h1 {
@@ -146,6 +150,19 @@ header p {
 
 header button {
   margin-top: 1em;
+}
+
+@media (min-width: 50em) {
+  header .mockup-container {
+    height: 30em;
+  }
+  header .mockup {
+    max-width: 43em;
+    top: -19.5em;
+  }
+  header .landing-container {
+    max-width: 25em;
+  }
 }
 
 @media (min-width: 64em) {
@@ -168,12 +185,19 @@ header button {
     background-image: url("../images/bg-intro-desktop.svg");
     height: 30em;
     width: 50em;
-    background-position: left -10em;
+    background-position: left bottom;
     background-size: 50em;
     background-repeat: no-repeat;
   }
   header .mockup {
-    top: -20%;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    top: -30%;
+    max-width: 40em;
+    min-width: 30em;
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
   }
 }
 
@@ -256,10 +280,10 @@ header button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -270,7 +294,7 @@ header button {
 }
 
 @media (min-width: 64em) {
-  .articles-container {
+  .cards-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

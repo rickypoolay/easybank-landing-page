@@ -101,14 +101,7 @@ nav {
         width:1.5em;
         cursor: pointer;
     }
-
-    @include breakpoint (laptop) {
-
-    }
 }
-
-
-
 
 .request-btn {
     border:none;
@@ -119,9 +112,15 @@ nav {
     cursor: pointer;
 }
 
+@include breakpoint (laptop) {
+    .container {
+        width: 70vw;
+    }
+}
+
 //Landing Section
 #landing-section {
-    padding-top: 1.5em;
+
     @include breakpoint (laptop) {
         padding:0;
 
@@ -137,19 +136,22 @@ header {
         position:relative;
         background-image: url("../images/bg-intro-mobile.svg");
         height: 20em;
-        width:100%;
         background-position:top;
-        background-size:cover;
+        background-size:100%;
         background-repeat:no-repeat;
+        
     }
+
 
     .mockup {
         position:absolute;
         z-index: 1;
-        top:-20%;
-        left:0;
+        top: -27%;
+        left:50%;
         width: 100%;
+        transform: translateX(-50%);
         padding:1em;
+        max-width: 22.5em;
     }
 
     h1 {
@@ -165,6 +167,22 @@ header {
         margin-top: 1em;
     }
 
+    @include breakpoint(tablet) {
+        .mockup-container {
+            height: 30em;
+        }
+
+        .mockup {
+            max-width: 43em;
+            top:-19.5em;
+        }
+
+        .landing-container {
+            max-width: 25em;
+        }
+
+    }
+
     @include breakpoint(laptop) {
         display: flex;
         justify-content: center;
@@ -175,13 +193,19 @@ header {
         background-image: url("../images/bg-intro-desktop.svg");
         height: 30em;
         width:50em;
-        background-position:left -10em;
+        background-position:left bottom;
         background-size: 50em;
         background-repeat:no-repeat;
         }
 
         .mockup {
-            top: -20%;
+            position:absolute;
+            padding:0;
+            width: 100%;
+            top: -30%;
+            max-width:40em;
+            min-width: 30em;
+            transform: translateX(-60%);
         }
         
     } 
@@ -248,7 +272,7 @@ header {
     }
     @include breakpoint (laptop) {
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      align-items: start;
      justify-content: center;
     }
@@ -256,7 +280,7 @@ header {
 
     // background-color: hsl(220, 16%, 96%);
 
-.articles-container {
+.cards-container {
     @include breakpoint (laptop) {
      display: flex;
      width: 100%;
